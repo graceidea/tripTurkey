@@ -1,0 +1,70 @@
+%% LyX 2.2.0dev created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass{beamer}
+\usepackage[T1]{fontenc}
+\usepackage{CJKutf8}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\providecommand{\LyX}{L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+ % this default might be overridden by plain title style
+ \newcommand\makebeamertitle{\frame{\maketitle}}%
+ % (ERT) argument for the TOC
+ \AtBeginDocument{%
+   \let\origtableofcontents=\tableofcontents
+   \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+   \def\gobbletableofcontents#1{\origtableofcontents}
+ }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% We use the "Berkeley" theme with a 3.45em-wide side bar on the left
+\usetheme[left,width=3.45em]{Berkeley}
+
+\makeatother
+
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}%
+
+\title{Presentations with Beamer and \LyX{}}
+
+\subtitle{An Introduction to the Basics}
+
+\author{The \LyX{} Team}
+
+\date{V. 2.1}
+\makebeamertitle
+\begin{frame}
+
+
+\frametitle<presentation>{Contents}
+
+\tableofcontents{}
+\end{frame}
+
+\section{Purposes}
+\begin{frame}[<+->]{Purpose of the Beamer class}
+
+With the \structure{Beamer} class, you can produce presentation slides,
+which
+
+\begin{itemize}
+\item are visually highly customizable
+\item 是一个文档写作系统
+\item can be constructed step-by-step (``overlay'' concept)
+\item may contain different navigation paths (note that the slides contain
+all sorts of hyperlinks)
+\item use \LaTeX{}'s superb output quality
+\item might embed multimedia content (audio, video)
+\item can easily be transformed to accompanying material (such as an article-like
+handout)
+\item and much more \ldots{}
+\end{itemize}
+\end{frame}
+\end{CJK}
+
+\end{document}
